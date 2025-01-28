@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --all-extras --all-packages --group lint
+
+      - name: Pre-commit Lint
+        uses: pre-commit/action@v3.0.0
+        with:
+          extra_args: --all-files --verbose
+        env:
+          SKIP: no-commit-to-branch
+
+      - name: Build Wheel
+        run: uv build --all-packages
+
+      - name: List Dist
+        run: ls -lh dist/

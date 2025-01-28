@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydantic-ai-starter"
+version = "0.0.1"
+description = "Minimal starter for PydanticAI"
+authors = [
+  { name="CherninLab", email="cherninlab@gmail.com" }
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+
+# pydantic-ai-slim with multiple extras
+dependencies = [
+  "pydantic-ai-slim[openai,anthropic,mistral,groq,logfire]>=0.0.20",
+  "fastapi>=0.115.4",
+  "logfire>=2.6",
+  "uvicorn>=0.22.0",
+
+  # For uv itself (pydantic-cli)
+  "pydantic-cli>=0.5.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["pydantic_ai_starter"]
+
+[dependency-groups]
+lint  = [
+  "pre-commit>=3.3.3",
+  "ruff>=0.6.9",
+  "black>=23.9.1",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+include = [
+    "pydantic_ai_starter/**/*.py",
+]
+
+[tool.logfire]
+ignore_no_config = true

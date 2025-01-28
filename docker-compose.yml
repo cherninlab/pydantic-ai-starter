@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  pydantic_ai:
+    build: .
+    container_name: "pydantic-ai-starter"
+    volumes:
+      - ./:/app
+    environment:
+      OPENAI_API_KEY: "${OPENAI_API_KEY}"
+      ANTHROPIC_API_KEY: "${ANTHROPIC_API_KEY}"
+      MISTRAL_API_KEY: "${MISTRAL_API_KEY}"
+    # Expose a port if you start a FastAPI app
+    ports:
+      - "8000:8000"
+    command: ["python", "-m", "pydantic_ai_starter"]
