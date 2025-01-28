@@ -1,6 +1,6 @@
 # Pydantic AI Starter
 
-[![CI](https://github.com/cherninlab/pydantic-ai-starter/actions/workflows/CI.yml/badge.svg?branch=main&event=status)](https://github.com/cherninlab/pydantic-ai-starter/actions/workflows/CI.yml)
+[![CI](https://github.com/cherninlab/pydantic-ai-starter/actions/workflows/CI.yml/badge.svg)](https://github.com/cherninlab/pydantic-ai-starter/actions/workflows/CI.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 
 This is a minimal starter project for [PydanticAI](https://pydantic.dev/ai), using [**uv**](https://docs.astral.sh/uv/getting-started/installation/) to manage installations and run commands.
@@ -39,8 +39,6 @@ Run the main script:
 uv run --env-file .env -- python -m pydantic_ai_starter
 ```
 
-> This will run `__main__.py` by default.
-
 ### API Providers
 
 This starter installs multiple providers via `pydantic-ai-slim` extras:
@@ -71,9 +69,9 @@ docker-compose up
 
 ## Development & CI
 
-- GitHub Actions in `.github/workflows/lint.yml` for linting (`pre-commit`) and building a wheel;
-- Pre-commit config in `.pre-commit-config.yaml`;
-- Example test in `tests/test_example.py`.
+- GitHub Actions in `.github/workflows/CI.yml` for linting (`pre-commit`)
+- Pre-commit config in `.pre-commit-config.yaml`
+- Example test in `tests/test_example.py`
 
 ## License
 
