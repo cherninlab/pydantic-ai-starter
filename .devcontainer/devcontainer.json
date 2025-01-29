@@ -1,0 +1,7 @@
+{
+  "name": "Pydantic AI Starter DevContainer",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "pydantic_ai",
+  "workspaceFolder": "/app",
+  "remoteUser": "root"
+}
