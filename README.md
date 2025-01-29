@@ -3,7 +3,7 @@
 [![CI](https://github.com/cherninlab/pydantic-ai-starter/actions/workflows/CI.yml/badge.svg)](https://github.com/cherninlab/pydantic-ai-starter/actions/workflows/CI.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://choosealicense.com/licenses/mit/)
 
-This is a minimal starter project for [PydanticAI](https://pydantic.dev/ai), using [**uv**](https://docs.astral.sh/uv/getting-started/installation/) to manage installations and run commands.
+This is a minimal starter project for [PydanticAI](https://ai.pydantic.dev), using [**uv**](https://docs.astral.sh/uv/getting-started/installation/) to manage installations and run commands.
 
 [![Open in GitPod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/cherninlab/pydantic-ai-starter)
 
