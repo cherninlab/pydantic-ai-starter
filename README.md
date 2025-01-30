@@ -7,21 +7,23 @@ This is a minimal starter project for [PydanticAI](https://ai.pydantic.dev), usi
 
 [![Open in GitPod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/cherninlab/pydantic-ai-starter)
 
+Need inspiration? Check out the official [Pydantic AI Examples](https://github.com/pydantic/pydantic-ai/tree/main/examples).
+
 ## Table of contents
 
-1. [Requirements](#1-requirements)
-2. [Getting Started](#2-getting-started)
-3. [Usage](#3-usage)
-4. [Docker / Docker Compose](#4-docker--docker-compose)
+1. [Requirements](#requirements)
+2. [Getting Started](#getting-started)
+3. [Usage](#usage)
+4. [Docker / Docker Compose](#docker--docker-compose)
 5. [Development & CI](#development--ci)
 6. [License](#license)
 
-## 1. Requirements
+## Requirements
 
 - [Python](https://www.python.org/) 3.9 or higher
 - [**uv**](https://docs.astral.sh/uv/getting-started/installation/) installed
 
-## 2. Getting Started
+## Getting Started
 
 Clone this repository and install dependencies:
 
@@ -33,7 +35,7 @@ uv sync
 
 > By default, `uv sync` reads pyproject.toml and installs the [project] dependencies.
 
-## 3. Usage
+## Usage
 
 Run the main script:
 
@@ -53,7 +55,7 @@ This starter installs multiple providers via `pydantic-ai-slim` extras:
 
 Configure your keys (if needed)
 
-## 4. Docker / Docker Compose
+## Docker / Docker Compose
 
 1. Build with Docker:
 
